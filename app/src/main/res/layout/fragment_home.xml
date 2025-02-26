@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/titleTxt"
+        style="@style/Widget.MaterialComponents.TextView"
+        android:layout_width="336dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="Spelling Bee"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/difficTxt"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:background="@color/grayA"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/difficBtns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt"
+        tools:text="BANALNY" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/difficBtns"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTxt">
+
+        <Button
+            android:id="@+id/playBtn"
+            style="@style/HexButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/hexagon"
+            android:onClick="playGame"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            app:icon="@drawable/play_arrow_24px"
+            app:iconSize="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="z" />
+
+        <Button
+            android:id="@+id/diffLBtn"
+            style="@style/HexButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/hexagon"
+            android:text="L"
+            android:textColor="#FFF"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playBtn" />
+
+        <Button
+            android:id="@+id/diffSrBtn"
+            style="@style/HexButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/hexagon"
+            android:text="Ś"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/playBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeWidth="5dp" />
+
+        <Button
+            android:id="@+id/diffTrBtn"
+            style="@style/HexButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/hexagon"
+            android:text="T"
+            android:textColor="#FFF"
+            android:textSize="34sp"
+            app:layout_constraintStart_toEndOf="@+id/playBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/diffEkBtn"
+            style="@style/HexButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/hexagon"
+            android:text="E"
+            android:textColor="#FFF"
+            android:textSize="34sp"
+            app:layout_constraintStart_toEndOf="@+id/diffLBtn"
+            app:layout_constraintTop_toBottomOf="@+id/diffTrBtn" />
+
+        <Button
+            android:id="@+id/diffLtBtn"
+            style="@style/HexButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/hexagon"
+            android:text="Ł"
+            android:textColor="#FFF"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toStartOf="@+id/playBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/diffBnBtn"
+            style="@style/HexButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/hexagon"
+            android:text="B"
+            android:textColor="#FFF"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toStartOf="@+id/diffLBtn"
+            app:layout_constraintTop_toBottomOf="@+id/diffLtBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

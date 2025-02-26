@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".fragments.GameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/wordTxt"
+            android:layout_width="350dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grayA"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="LISEK" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="350dp"
+            android:layout_height="370dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wordTxt">
+
+            <Button
+                android:id="@+id/centerBtn"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:background="@drawable/hexagon"
+                android:text="K"
+                android:textSize="48sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/edgeBtn4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/hexagon"
+                android:text="E"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/centerBtn" />
+
+            <Button
+                android:id="@+id/edgeBtn2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/hexagon"
+                android:text="Ą"
+                android:textSize="34sp"
+                app:layout_constraintStart_toEndOf="@+id/centerBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/edgeBtn3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/hexagon"
+                android:text="P"
+                android:textSize="34sp"
+                app:layout_constraintStart_toEndOf="@+id/centerBtn"
+                app:layout_constraintTop_toBottomOf="@+id/edgeBtn2" />
+
+            <Button
+                android:id="@+id/edgeBtn6"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/hexagon"
+                android:text="I"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toStartOf="@+id/centerBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/edgeBtn5"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/hexagon"
+                android:text="L"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toStartOf="@+id/centerBtn"
+                app:layout_constraintTop_toBottomOf="@+id/edgeBtn6" />
+
+            <Button
+                android:id="@+id/edgeBtn1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/hexagon"
+                android:onClick="clickLetter"
+                android:text="S"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toTopOf="@+id/centerBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="goBack"
+                app:icon="@drawable/arrow_back_24px"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/edgeBtn2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/edgeBtn1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="c" />
+
+            <Button
+                android:id="@+id/checkBtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:icon="@drawable/done_24px"
+                app:iconSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edgeBtn4"
+                app:layout_constraintTop_toBottomOf="@+id/edgeBtn3"
+                tools:text="S" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/sumaPkt"
+            android:layout_width="342dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:text="0 punktów"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/lastGuessed"
+            android:layout_width="342dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sumaPkt"
+            tools:text="KĄSEK -> 30 pkt." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
